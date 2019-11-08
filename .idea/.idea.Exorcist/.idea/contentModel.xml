@@ -14,15 +14,17 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Creature" t="Include">
+            <e p="DamageComponent.cs" t="Include" />
+            <e p="EffectComponent.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="AttackComponent.cs" t="Include" />
               <e p="BossComponent.cs" t="Include" />
-              <e p="EffectComponent.cs" t="Include" />
               <e p="ElementMarkComponent.cs" t="Include" />
               <e p="EnemyEntity.cs" t="Include" />
               <e p="FlyComponent.cs" t="Include" />
+              <e p="MovementComponent.cs" t="Include" />
               <e p="ResistComponent.cs" t="Include" />
-              <e p="SpeedComponent.cs" t="Include" />
+              <e p="TargetComponent.cs" t="Include" />
               <e p="WalkComponent.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
@@ -86,10 +88,18 @@
               <e p="Call.cs" t="Include" />
             </e>
             <e p="Effects" t="Include">
-              <e p="Effect.cs" t="Include" />
-              <e p="ElementResistReduce.cs" t="Include" />
-              <e p="PeriodicDamage.cs" t="Include" />
-              <e p="Slow.cs" t="Include" />
+              <e p="Common" t="Include">
+                <e p="Effect.cs" t="Include" />
+              </e>
+              <e p="Enemy" t="Include">
+                <e p="ElementResistReduce.cs" t="Include" />
+                <e p="PeriodicDamage.cs" t="Include" />
+                <e p="Slow.cs" t="Include" />
+                <e p="Stun.cs" t="Include" />
+              </e>
+              <e p="Player" t="Include">
+                <e p="PlayerResistEffect.cs" t="Include" />
+              </e>
             </e>
             <e p="Reads" t="Include">
               <e p="SpellElement.cs" t="Include" />

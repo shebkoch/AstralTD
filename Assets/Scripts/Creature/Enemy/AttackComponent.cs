@@ -7,22 +7,24 @@ namespace Creature.Enemy
 {
 	public class AttackComponent : MonoBehaviour
 	{
+		public TargetComponent targetComponent;
+
+		public float distanceToAttack;
+		
 		public float attackSpeed;
 		public float attack; 
 		
 		private float lastAttack;
-		private bool isReachTarget;
-		[Tag]
-		private string playerTag = "Player";
 
 		private void Start()
 		{
 			lastAttack = Time.timeSinceLevelLoad;
+			targetComponent = GetComponent<TargetComponent>();
 		}
 
 		void Update()
 		{
-			if (!isReachTarget) return;
+			if(Vector3.Distance(transform.position, targetComponent.targetTransform.position) > distanceToAttack) return;
 			
 			if (lastAttack + attackSpeed > Time.timeSinceLevelLoad)
 			{
@@ -33,16 +35,7 @@ namespace Creature.Enemy
 
 		private void Attack()
 		{
-			PlayerEntity.Instance.hp.Change(-attack);
-		}
-		private void OnTriggerEnter2D(Collider2D collision)
-		{
-			if(collision.CompareTag(playerTag))
-				isReachTarget = true;
-		}
-		private void OnTriggerExit2D(Collider2D collision) {
-			if (collision.CompareTag(playerTag))
-				isReachTarget = false;
+			PlayerEntity.Instance.damageComponent.Damage(attack);
 		}
 	}
 }

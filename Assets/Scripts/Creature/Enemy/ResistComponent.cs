@@ -59,5 +59,10 @@ public class ResistComponent : MonoBehaviour
 		int i = resists.IndexOf(GetResist(resist.elem));
 		resists[i] = resist;
 	}
-	
+
+	public Resist CommonResist()
+	{
+		return GetResist(Elem.None);
+	}
+
 }

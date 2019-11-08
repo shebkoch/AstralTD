@@ -6,7 +6,7 @@ namespace Spells.Effects
 
 		protected override void OnTick()
 		{
-			target.Damage(value, elem);
+			target.damage.Damage(value, elem);
 		}
 	}
 }

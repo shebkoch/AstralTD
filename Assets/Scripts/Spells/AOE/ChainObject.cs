@@ -22,7 +22,7 @@ namespace Spells.AOE
 		{
 			if (index >= targets.Count) Destroy(gameObject); //TODO
 
-			targets[index].Damage(damage, main);
+			targets[index].damage.Damage(damage, main);
 			index++;
 		}
 	}
