@@ -1,0 +1,117 @@
+Empty
+{
+	elems : l+f+t
+	main : l
+	dir: None
+	val: 10
+	dur: 0
+	mana: 0
+}
+Slow
+{
+	elems : a+th+w
+	main : th
+	dir : Ground
+	val : 50
+	dur: 3
+	mana: 10
+}
+MassDamage
+{
+	elems : f+l+th+d+e
+	main : f
+	dir : Ground
+	val : 40
+	dur: 0
+	mana: 40
+}
+AttackReduce
+{
+	elems : l+m+d
+	main : l
+	dir : Ground
+	val : 40
+	dur: 0
+	mana: 15
+}
+BackForce
+{
+	elems : a+th+e+d
+	main : a
+	dir : Both
+	val : 300
+	dur: 2
+	mana: 20
+}
+PeriodicDamage
+{
+	elems : f+l+th+a
+	main : f
+	dir : Ground
+	val : 0.5
+	charge: 100
+	mana: 20
+}
+PeriodicDamage
+{
+	elems : e+d+th+a
+	main : e
+	dir : Ground
+	val : 0.5
+	dur : 3
+	mana: 20
+}
+AddHP
+{
+	elems : d+t+f+th+a+m
+	main : l
+	dir : None
+	val : 10
+	dur: 0
+	mana: 30
+}
+RegenHp
+{
+	elems : e+t+th+l
+	main : t
+	dir : None
+	val : 1
+	dur: 0
+	mana: 30
+}
+VampiricHit
+{
+	elems :t+th+l+e+m
+	main : t
+	dir : None
+	val : 10
+	charge: 5
+	mana: 30
+}
+Stack
+{
+	elems : f+th+e+d+w
+	main : t
+	dir : Both
+	val : 10
+	dur : 4
+	mana: 10
+}
+WorldEater
+{
+	elems : f+d+a+e
+	main : d
+	dir : Both
+	val : 100
+	dur : 0
+	mana: 50
+}
+ManaHit
+{
+	elems :l+m+d+w+th+a
+	main : th
+	dir : None
+	val : 10
+	charge: 5
+	mana: 30
+}

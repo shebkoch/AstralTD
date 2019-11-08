@@ -1,0 +1,4 @@
+нужно добавить строчки ниже в файл manifest json в проекте 
+после "dependencies": {
+
+"com.mybox": "https://github.com/Deadcows/MyBox.git",

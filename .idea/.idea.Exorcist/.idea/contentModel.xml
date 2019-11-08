@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\shebk\.Rider2019.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\shebk\.Rider2019.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\shebk\.Rider2019.2\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\shebk\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\shebk\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Exorcist.-844820290.00" t="ExcludeRecursive" />
+    <e p="C:\Users\shebk\Downloads\Exorcist\Exorcist" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Resources" t="Include">
+          <e p="spells.txt" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Creature" t="Include">
+            <e p="Enemy" t="Include">
+              <e p="AttackComponent.cs" t="Include" />
+              <e p="BossComponent.cs" t="Include" />
+              <e p="EffectComponent.cs" t="Include" />
+              <e p="ElementMarkComponent.cs" t="Include" />
+              <e p="EnemyEntity.cs" t="Include" />
+              <e p="FlyComponent.cs" t="Include" />
+              <e p="ResistComponent.cs" t="Include" />
+              <e p="SpeedComponent.cs" t="Include" />
+              <e p="WalkComponent.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="PlayerEntity.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Element.cs" t="Include" />
+          <e p="ElementWeaving.cs" t="Include" />
+          <e p="Fireball.cs" t="Include" />
+          <e p="genericLib" t="Include">
+            <e p="Creature" t="Include">
+              <e p="HPComponent.cs" t="Include" />
+              <e p="ManaComponent.cs" t="Include" />
+              <e p="Parameter.cs" t="Include" />
+            </e>
+            <e p="Extension" t="Include">
+              <e p="GameObjectExtension.cs" t="Include" />
+              <e p="TransformExtensions.cs" t="Include" />
+              <e p="VectorExtension.cs" t="Include" />
+            </e>
+            <e p="GameManaging" t="Include">
+              <e p="CameraComponent.cs" t="Include" />
+              <e p="EndComponent.cs" t="Include" />
+              <e p="GameManagerComponent.cs" t="Include" />
+              <e p="PauseComponent.cs" t="Include" />
+              <e p="ScoreComponent.cs" t="Include" />
+              <e p="ShareComponent.cs" t="Include" />
+              <e p="SoundComponent.cs" t="Include" />
+            </e>
+            <e p="Players" t="Include">
+              <e p="Movement" t="Include">
+                <e p="AxisMovement2D.cs" t="Include" />
+                <e p="AxisRigidBodyMovement.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Props" t="Include">
+              <e p="TapCollectibleComponent.cs" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="UIComponent.cs" t="Include" />
+            </e>
+            <e p="Utilities" t="Include">
+              <e p="Direction.cs" t="Include" />
+              <e p="IntEvent.cs" t="Include" />
+              <e p="Singleton.cs" t="Include" />
+            </e>
+          </e>
+          <e p="LevelController.cs" t="Include" />
+          <e p="Managing" t="Include">
+            <e p="EnemiesContainer.cs" t="Include" />
+            <e p="EnemiesGenerator.cs" t="Include" />
+            <e p="EnemyFinder.cs" t="Include" />
+          </e>
+          <e p="Shell.cs" t="Include" />
+          <e p="Spells" t="Include">
+            <e p="AOE" t="Include">
+              <e p="Chain.cs" t="Include" />
+              <e p="ChainObject.cs" t="Include" />
+            </e>
+            <e p="Call" t="Include">
+              <e p="Call.cs" t="Include" />
+            </e>
+            <e p="Effects" t="Include">
+              <e p="Effect.cs" t="Include" />
+              <e p="ElementResistReduce.cs" t="Include" />
+              <e p="PeriodicDamage.cs" t="Include" />
+              <e p="Slow.cs" t="Include" />
+            </e>
+            <e p="Reads" t="Include">
+              <e p="SpellElement.cs" t="Include" />
+              <e p="SpellElementSimple.cs" t="Include" />
+              <e p="SpellsDesc.cs" t="Include" />
+              <e p="SpellsDescSimple.cs" t="Include" />
+            </e>
+            <e p="Spell.cs" t="Include" />
+          </e>
+          <e p="SpellTODO.cs" t="Include" />
+          <e p="SpellWeaving.cs" t="Include" />
+          <e p="Timer.cs" t="Include" />
+          <e p="WaveContainer.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Exorcist.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
