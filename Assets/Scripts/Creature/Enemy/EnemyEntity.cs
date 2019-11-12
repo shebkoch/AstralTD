@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using Creature.Enemy;
 using UnityEngine;
 
+[RequireComponent(typeof(HPComponent))]
+[RequireComponent(typeof(ResistComponent))]
+[RequireComponent(typeof(ElementMarkComponent))]
+[RequireComponent(typeof(BossComponent))]
+[RequireComponent(typeof(MovementComponent))]
+[RequireComponent(typeof(EffectComponent))]
+[RequireComponent(typeof(AttackComponent))]
+[RequireComponent(typeof(DamageComponent))]
+[RequireComponent(typeof(TargetComponent))]
 public class EnemyEntity : MonoBehaviour
 {
 	public HPComponent hp;
@@ -15,6 +24,7 @@ public class EnemyEntity : MonoBehaviour
 	public EffectComponent effectComponent;
 	public AttackComponent attackComponent;
 	public DamageComponent damage;
+	public TargetComponent target;
 	private void Start()
 	{
 		hp = GetComponent<HPComponent>();
@@ -28,5 +38,7 @@ public class EnemyEntity : MonoBehaviour
 		effectComponent = GetComponent<EffectComponent>();
 		attackComponent = GetComponent<AttackComponent>();
 		damage = GetComponent<DamageComponent>();
+		target = GetComponent<TargetComponent>();
+		
 	}
 }

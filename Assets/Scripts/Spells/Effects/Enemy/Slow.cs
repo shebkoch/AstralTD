@@ -5,8 +5,6 @@ namespace Spells.Effects
 		public override string Name => "Slow";
 		
 		private float startSpeed;
-		protected override void OnTick() {}
-
 		protected override void OnStart()
 		{
 			startSpeed = target.movementComponent.speed;

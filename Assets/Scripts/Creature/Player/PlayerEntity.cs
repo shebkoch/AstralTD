@@ -4,6 +4,9 @@ using UnityEngine;
 
 [RequireComponent(typeof(HPComponent))]
 [RequireComponent(typeof(ManaComponent))]
+[RequireComponent(typeof(EffectComponent))]
+[RequireComponent(typeof(ResistComponent))]
+[RequireComponent(typeof(DamageComponent))]
 public class PlayerEntity : Singleton<PlayerEntity>
 {
 	public HPComponent hp;

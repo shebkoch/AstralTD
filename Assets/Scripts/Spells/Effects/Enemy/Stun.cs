@@ -3,10 +3,6 @@ namespace Spells.Effects
 	public class Stun : Effect
 	{
 		public override string Name { get; }
-		protected override void OnTick()
-		{
-		}
-
 		protected override void OnStart()
 		{
 			target.movementComponent.enabled = false;

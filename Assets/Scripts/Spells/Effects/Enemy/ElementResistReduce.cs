@@ -11,12 +11,7 @@ namespace Spells.Effects
 		public ResistComponent.Resist changeResist;
 
 		private ResistComponent.Resist startResist;
-
-
-		protected override void OnTick()
-		{
-		}
-
+		
 		protected override void OnStart()
 		{
 			startResist = target.resist.GetResist(ReduceElem).Clone();

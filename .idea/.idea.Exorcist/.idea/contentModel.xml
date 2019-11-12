@@ -92,8 +92,10 @@
                 <e p="Effect.cs" t="Include" />
               </e>
               <e p="Enemy" t="Include">
+                <e p="Charm.cs" t="Include" />
                 <e p="ElementResistReduce.cs" t="Include" />
                 <e p="PeriodicDamage.cs" t="Include" />
+                <e p="Repulsion.cs" t="Include" />
                 <e p="Slow.cs" t="Include" />
                 <e p="Stun.cs" t="Include" />
               </e>

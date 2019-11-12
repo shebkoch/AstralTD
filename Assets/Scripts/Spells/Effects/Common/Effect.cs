@@ -35,7 +35,11 @@ namespace Spells.Effects
 		{
 			OnEnd();
 		}
-		protected abstract void OnTick();
+
+		protected virtual void OnTick()
+		{
+			
+		}
 
 		protected virtual void OnStart()
 		{

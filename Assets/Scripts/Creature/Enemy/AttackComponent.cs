@@ -35,7 +35,7 @@ namespace Creature.Enemy
 
 		private void Attack()
 		{
-			PlayerEntity.Instance.damageComponent.Damage(attack);
+			targetComponent.targetDamage.Damage(attack);
 		}
 	}
 }
