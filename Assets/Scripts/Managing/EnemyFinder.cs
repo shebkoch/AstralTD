@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using MyBox;
 using Spell;
 using UnityEngine;
 
@@ -8,12 +9,29 @@ namespace Managing
 {
 	public class EnemyFinder : Singleton<EnemyFinder>
 	{
-		public static List<EnemyEntity> Find(SpellElement spellElement)
+		public static List<EnemyEntity> Find()
 		{
-			List<EnemyEntity> bossCheck =
-				EnemiesContainer.Enemies.FindAll(x => x.bossComponent == spellElement.IsBossAffect);
+			return EnemiesContainer.Enemies;
+		}
+	}
+
+	public static class EnemyFinderExtension
+	{
+		public static List<EnemyEntity> Closest(this List<EnemyEntity> entities, float distance = -1)
+		{
+			var playerPos = PlayerEntity.Instance.transform.position;
+			IEnumerable<EnemyEntity> resultEntities = entities;
+			if (distance > 0)
+				resultEntities = entities.Where(x => Vector2.Distance(playerPos, x.transform.position) < distance);
 			
-			switch (spellElement.MovementType)
+			return resultEntities.OrderBy(x => Vector2.Distance(playerPos, x.transform.position)).ToList();
+		}
+
+		public static List<EnemyEntity> Where(this IEnumerable<EnemyEntity> entities, SpellElementDesc spellElementDesc)
+		{
+			List<EnemyEntity> bossCheck = entities.Where(x => x.bossComponent == spellElementDesc.IsBossAffect).ToList();
+			
+			switch (spellElementDesc.MovementType)
 			{
 				case MovementMask.Both:
 					return bossCheck;
@@ -25,35 +43,10 @@ namespace Managing
 					return null;
 			}
 		}
-		
-		public static EnemyEntity FindOneByMark(List<Elem> mark)
-		{
-			return EnemiesContainer.Enemies.Find(x =>
-				x.elementMark.marks.Count == mark.Count && !x.elementMark.marks.Except(mark).Any());
-		}
 
-		public static List<EnemyEntity> FindByMovementType(bool isFlying)
+		public static List<EnemyEntity> ByMark(this IEnumerable<EnemyEntity> entities, Elems elems)
 		{
-			return EnemiesContainer.Enemies.FindAll(x => x.flyComponent == isFlying);
-		}
-
-		public static List<EnemyEntity> Find(bool isFlying, bool isBoss)
-		{
-			return EnemiesContainer.Enemies.FindAll(x => x.flyComponent == isFlying && x.bossComponent == isBoss);
-		}
-	}
-
-	public static class EnemyFinderExtension
-	{
-		public static List<EnemyEntity> SortClosest(this List<EnemyEntity> entities)
-		{
-			var playerPos = PlayerEntity.Instance.transform.position;
-			return entities.OrderBy(x => Vector2.Distance(playerPos, x.transform.position)).ToList();
-		}
-
-		public static List<EnemyEntity> Count(this List<EnemyEntity> entities, int count)
-		{
-			return entities.GetRange(0, count);
+			return entities.Where(x => x.elementMark.marks.Equals(elems)).ToList();
 		}
 	}
 }

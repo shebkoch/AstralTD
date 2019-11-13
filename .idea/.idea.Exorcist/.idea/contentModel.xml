@@ -77,6 +77,8 @@
             <e p="EnemiesContainer.cs" t="Include" />
             <e p="EnemiesGenerator.cs" t="Include" />
             <e p="EnemyFinder.cs" t="Include" />
+            <e p="SpellManager.cs" t="Include" />
+            <e p="WaveContainer.cs" t="Include" />
           </e>
           <e p="Shell.cs" t="Include" />
           <e p="Spells" t="Include">
@@ -104,17 +106,18 @@
               </e>
             </e>
             <e p="Reads" t="Include">
-              <e p="SpellElement.cs" t="Include" />
+              <e p="SpellElementDesc.cs" t="Include" />
               <e p="SpellElementSimple.cs" t="Include" />
               <e p="SpellsDesc.cs" t="Include" />
               <e p="SpellsDescSimple.cs" t="Include" />
             </e>
             <e p="Spell.cs" t="Include" />
+            <e p="SpellContainer.cs" t="Include" />
+            <e p="SpellElement.cs" t="Include" />
           </e>
           <e p="SpellTODO.cs" t="Include" />
           <e p="SpellWeaving.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
-          <e p="WaveContainer.cs" t="Include" />
         </e>
       </e>
       <e p="Exorcist.sln" t="IncludeFlat" />

@@ -2,7 +2,7 @@ using System;
 
 namespace Spell
 {
-	public class SpellElement
+	public class SpellElementDesc
 	{
 		public string Name { get; set; }
 		public Elem Main { get; set; }
@@ -14,11 +14,11 @@ namespace Spell
 		public int TargetCount { get; set; }
 		public float Cost { get; set; }
 
-		public SpellElement(string json) : this(SpellElementSimple.FromJson(json))
+		public SpellElementDesc(string json) : this(SpellElementSimple.FromJson(json))
 		{
  		}
 
-		public SpellElement(SpellElementSimple simple)
+		public SpellElementDesc(SpellElementSimple simple)
 		{
 			this.Name = simple.Name;
 			this.Main = Element.ToElem(simple.Main);

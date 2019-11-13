@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Spells.AOE
 {
-	public class Chain : Spell
+	public class Chain : SpellElement
 	{
 		public ChainObject prefab;
 
 		public override void OnCast()
 		{
-			var enemies = EnemyFinder.Find(Desc).SortClosest().Count(Desc.TargetCount);
+			var enemies = EnemyFinder.Find(Desc).Closest().Count(Desc.TargetCount);
 			
 			//TODO
 			prefab.damage = Desc.Value;

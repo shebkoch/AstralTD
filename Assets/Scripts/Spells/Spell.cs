@@ -1,11 +1,16 @@
-using Spell;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Spells
 {
-	public abstract class Spell : MonoBehaviour
+	public class Spell : MonoBehaviour
 	{
-		public SpellElement Desc { get; set;}
-		public abstract void OnCast();
+		public Elems elems;
+		public List<SpellElement> spellElements = new List<SpellElement>();
+
+		public void Cast(List<EnemyEntity> enemies)
+		{
+			spellElements.ForEach(x => x.OnCast());
+		}
 	}
 }

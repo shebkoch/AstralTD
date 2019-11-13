@@ -1,6 +1,6 @@
 namespace Spells.Call
 {
-	public class Call : Spell
+	public class Call : SpellElement
 	{
 		public override void OnCast()
 		{
