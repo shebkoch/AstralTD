@@ -1,10 +1,15 @@
 using System.Collections.Generic;
-using NUnit.Framework;
+using System.Linq;
 
 namespace Spells
 {
-	public class SpellContainer
+	public class SpellContainer : Singleton<SpellContainer>
 	{
 		public List<Spell> spells;
+
+		public Spell GetSpell(Elems elems)
+		{
+			return spells.FirstOrDefault(x => x.elems.Equals(elems));
+		}
 	}
 }

@@ -1,3 +1,4 @@
+using System.Linq;
 using Managing;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ namespace Spells.AOE
 
 		public override void OnCast()
 		{
-			var enemies = EnemyFinder.Find(Desc).Closest().Count(Desc.TargetCount);
+			var enemies = EnemyFinder.Find().Closest().Take(Desc.TargetCount).Where(Desc);
 			
 			//TODO
 			prefab.damage = Desc.Value;

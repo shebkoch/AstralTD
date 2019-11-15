@@ -2,9 +2,11 @@ using UnityEngine;
 
 namespace Creature.Enemy
 {
-	public class TargetComponent
+	public class TargetComponent : MonoBehaviour
 	{
+		[HideInInspector]
 		public DamageComponent targetDamage;
+		[HideInInspector]
 		public Transform targetTransform;
 
 		private void Start()

@@ -9,7 +9,6 @@ namespace Creature.Enemy
 	public class EffectComponent : MonoBehaviour
 	{
 		public Dictionary<string, Effect> effects = new Dictionary<string, Effect>();
-
 		
 		public void AddEffect<T>(T effect) where T : Effect
 		{

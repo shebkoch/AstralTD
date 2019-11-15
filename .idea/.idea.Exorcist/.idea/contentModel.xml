@@ -19,6 +19,7 @@
             <e p="Enemy" t="Include">
               <e p="AttackComponent.cs" t="Include" />
               <e p="BossComponent.cs" t="Include" />
+              <e p="DeathComponent.cs" t="Include" />
               <e p="ElementMarkComponent.cs" t="Include" />
               <e p="EnemyEntity.cs" t="Include" />
               <e p="FlyComponent.cs" t="Include" />
@@ -28,11 +29,11 @@
               <e p="WalkComponent.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
+              <e p="PlayerAttackComponent.cs" t="Include" />
               <e p="PlayerEntity.cs" t="Include" />
             </e>
           </e>
           <e p="Element.cs" t="Include" />
-          <e p="ElementWeaving.cs" t="Include" />
           <e p="Fireball.cs" t="Include" />
           <e p="genericLib" t="Include">
             <e p="Creature" t="Include">
@@ -74,6 +75,7 @@
           </e>
           <e p="LevelController.cs" t="Include" />
           <e p="Managing" t="Include">
+            <e p="ElementManager.cs" t="Include" />
             <e p="EnemiesContainer.cs" t="Include" />
             <e p="EnemiesGenerator.cs" t="Include" />
             <e p="EnemyFinder.cs" t="Include" />
@@ -116,8 +118,11 @@
             <e p="SpellElement.cs" t="Include" />
           </e>
           <e p="SpellTODO.cs" t="Include" />
-          <e p="SpellWeaving.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
+          <e p="Weaving" t="Include">
+            <e p="ElementWeaving.cs" t="Include" />
+            <e p="SpellWeaving.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Exorcist.sln" t="IncludeFlat" />

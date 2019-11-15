@@ -7,6 +7,7 @@ namespace Creature.Enemy
 {
 	public class AttackComponent : MonoBehaviour
 	{
+		[HideInInspector]
 		public TargetComponent targetComponent;
 
 		public float distanceToAttack;

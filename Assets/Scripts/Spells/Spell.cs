@@ -8,7 +8,7 @@ namespace Spells
 		public Elems elems;
 		public List<SpellElement> spellElements = new List<SpellElement>();
 
-		public void Cast(List<EnemyEntity> enemies)
+		public void Cast()
 		{
 			spellElements.ForEach(x => x.OnCast());
 		}
