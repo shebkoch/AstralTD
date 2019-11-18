@@ -9,10 +9,11 @@ namespace Creature.Enemy
 		[HideInInspector]
 		public Transform targetTransform;
 
-		private void Start()
+		private void OnEnable()
 		{
 			TargetOnPlayer();
 		}
+		
 		public void TargetOnPlayer()
 		{
 			targetDamage = PlayerEntity.Instance.damageComponent;

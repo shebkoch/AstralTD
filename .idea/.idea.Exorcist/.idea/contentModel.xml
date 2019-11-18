@@ -7,6 +7,7 @@
     <e p="C:\Users\shebk\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\shebk\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Exorcist.-844820290.00" t="ExcludeRecursive" />
     <e p="C:\Users\shebk\Downloads\Exorcist\Exorcist" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
@@ -28,10 +29,14 @@
               <e p="TargetComponent.cs" t="Include" />
               <e p="WalkComponent.cs" t="Include" />
             </e>
+            <e p="Missile" t="Include">
+              <e p="MissileEntity.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="PlayerAttackComponent.cs" t="Include" />
               <e p="PlayerEntity.cs" t="Include" />
             </e>
+            <e p="SimpleAttackComponent.cs" t="Include" />
           </e>
           <e p="Element.cs" t="Include" />
           <e p="Fireball.cs" t="Include" />
@@ -79,6 +84,8 @@
             <e p="EnemiesContainer.cs" t="Include" />
             <e p="EnemiesGenerator.cs" t="Include" />
             <e p="EnemyFinder.cs" t="Include" />
+            <e p="PoolInfoComponent.cs" t="Include" />
+            <e p="PoolManager.cs" t="Include" />
             <e p="SpellManager.cs" t="Include" />
             <e p="WaveContainer.cs" t="Include" />
           </e>
@@ -123,6 +130,12 @@
             <e p="ElementWeaving.cs" t="Include" />
             <e p="SpellWeaving.cs" t="Include" />
           </e>
+        </e>
+        <e p="SerializableDictionary" t="Include">
+          <e p="Editor" t="Include">
+            <e p="SerializableDictionaryPropertyDrawer.cs" t="Include" />
+          </e>
+          <e p="SerializableDictionary.cs" t="Include" />
         </e>
       </e>
       <e p="Exorcist.sln" t="IncludeFlat" />

@@ -15,7 +15,10 @@ namespace Creature.Enemy
 
 		private void Update()
 		{
-			if(hpComponent.Hp <= 0) Destroy(gameObject);  //TODO
+			if (hpComponent.Hp > 0) return;
+
+			EnemiesContainer.Remove(gameObject);
+			gameObject.SetActive(false);
 		}
 	}
 }

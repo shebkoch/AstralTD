@@ -6,6 +6,8 @@ namespace Creature.Enemy
 	public class MovementComponent : MonoBehaviour
 	{
 		public float speed;
+		public float distanceToReach = 0.001f;
+		public bool isTargetReach;
 
 		private TargetComponent targetComponent;
 
@@ -16,9 +18,15 @@ namespace Creature.Enemy
 
 		public void Update()
 		{
-			if (Vector3.Distance(transform.position, targetComponent.targetTransform.position) < 0.001f) return;
-			
-			transform.position = Vector3.MoveTowards(transform.position, targetComponent.targetTransform.position, Time.deltaTime * speed);
+			if (Vector3.Distance(transform.position, targetComponent.targetTransform.position) < distanceToReach){
+				isTargetReach = true;
+			}
+			else
+			{
+				isTargetReach = false;
+				transform.position = Vector3.MoveTowards(transform.position, targetComponent.targetTransform.position,
+					Time.deltaTime * speed);
+			}
 		}
 	}
 }

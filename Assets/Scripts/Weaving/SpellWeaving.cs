@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Creature.Enemy;
 using Managing;
 using MyBox;
 using Spells;
@@ -8,7 +9,7 @@ using UnityEngine;
 public class SpellWeaving : Singleton<SpellWeaving>
 {
 	public Collider2D board;
-	
+
 	private bool isMousePressed;
 
 	public Elems usedElems = new Elems();
@@ -34,7 +35,7 @@ public class SpellWeaving : Singleton<SpellWeaving>
 		}
 		if (Input.GetMouseButtonUp(0)) {
 			if(isMousePressed)
-				SpellManager.Instance.CastOrAttack(usedElems, PlayerEntity.Instance.attack.attack);
+				SpellManager.Instance.CastOrAttack(usedElems,);
 			isMousePressed = false;
 			line.positionCount = 0;
 			pointsList.Clear();

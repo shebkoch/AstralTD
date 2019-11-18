@@ -1,4 +1,5 @@
 using System;
+using Creature.Enemy.Player;
 using MyBox;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
@@ -13,14 +14,16 @@ namespace Creature.Enemy
 		public float distanceToAttack;
 		
 		public float attackSpeed;
-		public float attack; 
-		
+
 		private float lastAttack;
+		
+		private SimpleAttackComponent attack;
 
 		private void Start()
 		{
 			lastAttack = Time.timeSinceLevelLoad;
 			targetComponent = GetComponent<TargetComponent>();
+			attack = GetComponent<SimpleAttackComponent>();
 		}
 
 		void Update()
@@ -36,7 +39,7 @@ namespace Creature.Enemy
 
 		private void Attack()
 		{
-			targetComponent.targetDamage.Damage(attack);
+			targetComponent.targetDamage.Damage(attack.attack);
 		}
 	}
 }

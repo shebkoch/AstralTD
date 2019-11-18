@@ -1,9 +1,10 @@
+using Creature.Enemy;
 using UnityEngine;
 
-namespace Creature.Enemy.Player
+namespace Creature.Player
 {
 	public class PlayerAttackComponent : MonoBehaviour
 	{
-		public float attack;
+		public MissileEntity prefab;
 	}
 }

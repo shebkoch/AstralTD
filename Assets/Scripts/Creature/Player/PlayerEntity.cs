@@ -1,6 +1,7 @@
 using System;
 using Creature.Enemy;
 using Creature.Enemy.Player;
+using Creature.Player;
 using UnityEngine;
 
 [RequireComponent(typeof(HPComponent))]
@@ -8,6 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(EffectComponent))]
 [RequireComponent(typeof(ResistComponent))]
 [RequireComponent(typeof(DamageComponent))]
+[RequireComponent(typeof(SimpleAttackComponent))]
 [RequireComponent(typeof(PlayerAttackComponent))]
 public class PlayerEntity : Singleton<PlayerEntity>
 {
@@ -22,14 +24,18 @@ public class PlayerEntity : Singleton<PlayerEntity>
 	[HideInInspector]
 	public DamageComponent damageComponent;
 	[HideInInspector]
+	public SimpleAttackComponent simpleAttack;
+	[HideInInspector] 
 	public PlayerAttackComponent attack;
-	private void Start()
+	
+	private void Awake()
 	{
 		hp = GetComponent<HPComponent>();
 		mana = GetComponent<ManaComponent>();
 		effectComponent = GetComponent<EffectComponent>();
 		resist = GetComponent<ResistComponent>();
 		damageComponent = GetComponent<DamageComponent>();
+		simpleAttack = GetComponent<SimpleAttackComponent>();
 		attack = GetComponent<PlayerAttackComponent>();
 	}
 }

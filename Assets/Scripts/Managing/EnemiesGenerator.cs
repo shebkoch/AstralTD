@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Managing;
 using UnityEngine;
 
 public class EnemiesGenerator : Singleton<EnemiesGenerator>
@@ -40,7 +41,7 @@ public class EnemiesGenerator : Singleton<EnemiesGenerator>
 		Vector2 pos;
 		pos.x = Random.Range(minBounds.x, maxBounds.x);
 		pos.y = Random.Range(minBounds.y, maxBounds.y);
-		var enemyInst = Instantiate(enemy, pos, Quaternion.identity, transform);
+		var enemyInst = PoolManager.Instantiate(enemy, pos);
 		EnemiesContainer.Add(enemyInst);
 	}
 }

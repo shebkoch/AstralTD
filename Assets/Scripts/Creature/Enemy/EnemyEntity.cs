@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Creature.Enemy;
+using Creature.Enemy.Player;
+using Managing;
 using UnityEngine;
 
 [RequireComponent(typeof(HPComponent))]
@@ -10,9 +12,11 @@ using UnityEngine;
 [RequireComponent(typeof(MovementComponent))]
 [RequireComponent(typeof(EffectComponent))]
 [RequireComponent(typeof(AttackComponent))]
+[RequireComponent(typeof(SimpleAttackComponent))]
 [RequireComponent(typeof(DamageComponent))]
 [RequireComponent(typeof(TargetComponent))]
 [RequireComponent(typeof(DeathComponent))]
+[RequireComponent(typeof(PoolInfoComponent))]
 public class EnemyEntity : MonoBehaviour
 {
 	[HideInInspector]
@@ -34,12 +38,17 @@ public class EnemyEntity : MonoBehaviour
 	[HideInInspector]
 	public AttackComponent attackComponent;
 	[HideInInspector]
+	public SimpleAttackComponent simpleAttack;
+	[HideInInspector]
 	public DamageComponent damage;
 	[HideInInspector]
 	public TargetComponent target;
 	[HideInInspector]
 	public DeathComponent death;
-	private void Start()
+	[HideInInspector]
+	public PoolInfoComponent poolInfo;
+	
+	private void Awake()
 	{
 		hp = GetComponent<HPComponent>();
 		resist = GetComponent<ResistComponent>();
@@ -51,9 +60,10 @@ public class EnemyEntity : MonoBehaviour
 		movementComponent = GetComponent<MovementComponent>();
 		effectComponent = GetComponent<EffectComponent>();
 		attackComponent = GetComponent<AttackComponent>();
+		simpleAttack = GetComponent<SimpleAttackComponent>();
 		damage = GetComponent<DamageComponent>();
 		target = GetComponent<TargetComponent>();
 		death = GetComponent<DeathComponent>();
-
+		poolInfo = GetComponent<PoolInfoComponent>();
 	}
 }

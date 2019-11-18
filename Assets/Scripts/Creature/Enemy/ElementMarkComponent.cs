@@ -16,7 +16,12 @@ namespace Creature.Enemy
 		[ReadOnly]		
 		public List<Elem> marks;
 		
-		public void Start()
+		public void OnEnable()
+		{
+			AddMarks();
+		}
+
+		private void AddMarks()
 		{
 			marks = Element.RandomSet(markCount);
 			for (int i = 0; i < marks.Count; i++) 
