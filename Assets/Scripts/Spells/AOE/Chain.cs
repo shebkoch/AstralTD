@@ -16,7 +16,7 @@ namespace Spells.AOE
 			prefab.damage = Desc.Value;
 			prefab.main = Desc.Main;
 			prefab.targets = enemies;
-				Instantiate(prefab.gameObject, Vector3.zero, Quaternion.identity);
+			PoolManager.Instantiate(prefab.gameObject, Vector3.one);
 		}
 	}
 } 

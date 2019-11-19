@@ -16,8 +16,10 @@ GameObject:
   - component: {fileID: 5328015374021333046}
   - component: {fileID: 2247378590450032895}
   - component: {fileID: 8171746498333115166}
-  - component: {fileID: 7370819813328334335}
+  - component: {fileID: 6094160843174212139}
   - component: {fileID: 3057952396838914339}
+  - component: {fileID: 5779129746832111217}
+  - component: {fileID: 7370819813328334335}
   - component: {fileID: 7246490156080187999}
   - component: {fileID: 8061453678038597606}
   - component: {fileID: 5013373443365694154}
@@ -124,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4ba3dce24048428542a3d7768062b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxValue: 2
-  value: 2
+  maxValue: 50
+  value: 50
   hpType: 0
   bar: {fileID: 2097682769584425604}
   countObjects: []
@@ -184,7 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!114 &7370819813328334335
+  distanceToReach: 0.001
+  isTargetReach: 0
+--- !u!114 &6094160843174212139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,9 +197,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1784254099101950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1498d9fee2474e39b7dac2b07f5ee9b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 3122e29713bd4fa69011aa98872badec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: 0.05
 --- !u!114 &3057952396838914339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +216,32 @@ MonoBehaviour:
   targetComponent: {fileID: 0}
   distanceToAttack: 1
   attackSpeed: 1
-  attack: 1
+--- !u!114 &5779129746832111217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784254099101950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2558ccd90c4e4f1b9a5dde7e0c8f69a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: greenEye
+  parent: {fileID: 0}
+--- !u!114 &7370819813328334335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784254099101950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1498d9fee2474e39b7dac2b07f5ee9b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7246490156080187999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,11 +287,14 @@ MonoBehaviour:
   flyComponent: {fileID: 0}
   bossComponent: {fileID: 0}
   movementComponent: {fileID: 0}
-  effectComponent: {fileID: 0}
+  effects: {fileID: 0}
   attackComponent: {fileID: 0}
+  simpleAttack: {fileID: 0}
   damage: {fileID: 0}
   target: {fileID: 0}
   death: {fileID: 0}
+  poolInfo: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &-2389034578556141014
 MonoBehaviour:
   m_ObjectHideFlags: 0

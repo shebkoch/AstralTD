@@ -24,14 +24,15 @@
               <e p="ElementMarkComponent.cs" t="Include" />
               <e p="EnemyEntity.cs" t="Include" />
               <e p="FlyComponent.cs" t="Include" />
-              <e p="MovementComponent.cs" t="Include" />
               <e p="ResistComponent.cs" t="Include" />
               <e p="TargetComponent.cs" t="Include" />
               <e p="WalkComponent.cs" t="Include" />
             </e>
             <e p="Missile" t="Include">
+              <e p="MissileAttack.cs" t="Include" />
               <e p="MissileEntity.cs" t="Include" />
             </e>
+            <e p="MovementComponent.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="PlayerAttackComponent.cs" t="Include" />
               <e p="PlayerEntity.cs" t="Include" />
@@ -39,7 +40,6 @@
             <e p="SimpleAttackComponent.cs" t="Include" />
           </e>
           <e p="Element.cs" t="Include" />
-          <e p="Fireball.cs" t="Include" />
           <e p="genericLib" t="Include">
             <e p="Creature" t="Include">
               <e p="HPComponent.cs" t="Include" />
@@ -89,7 +89,6 @@
             <e p="SpellManager.cs" t="Include" />
             <e p="WaveContainer.cs" t="Include" />
           </e>
-          <e p="Shell.cs" t="Include" />
           <e p="Spells" t="Include">
             <e p="AOE" t="Include">
               <e p="Chain.cs" t="Include" />
@@ -102,6 +101,7 @@
               <e p="Common" t="Include">
                 <e p="Effect.cs" t="Include" />
               </e>
+              <e p="EffectAoeSpell.cs" t="Include" />
               <e p="Enemy" t="Include">
                 <e p="Charm.cs" t="Include" />
                 <e p="ElementResistReduce.cs" t="Include" />
@@ -124,8 +124,6 @@
             <e p="SpellContainer.cs" t="Include" />
             <e p="SpellElement.cs" t="Include" />
           </e>
-          <e p="SpellTODO.cs" t="Include" />
-          <e p="Timer.cs" t="Include" />
           <e p="Weaving" t="Include">
             <e p="ElementWeaving.cs" t="Include" />
             <e p="SpellWeaving.cs" t="Include" />

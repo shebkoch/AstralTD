@@ -6,12 +6,14 @@ using UnityEngine;
 
 namespace Managing
 {
-	public static class PoolManager 
+	public class PoolManager : MonoBehaviour
 	{
 		private static Dictionary<string, List<GameObject>> objects = new Dictionary<string, List<GameObject>>();
 
 		public static GameObject Instantiate(PoolInfoComponent poolInfoComponent, Vector3 pos, Transform parent = default)
 		{
+			if (!objects.ContainsKey(poolInfoComponent.type)) objects[poolInfoComponent.type] = new List<GameObject>();
+			
 			List<GameObject> gameObjects = objects[poolInfoComponent.type];
 			GameObject obj = gameObjects.FirstOrDefault(x => !x.activeInHierarchy);
 			if (!obj)

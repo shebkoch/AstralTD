@@ -19,6 +19,12 @@ namespace GenericLib.Creature
 		[ConditionalField(nameof(hpType), false, ParameterType.Count)]
 		public List<GameObject> countObjects;
 
+		public void OnEnable()
+		{
+			value = maxValue;
+			Show();
+		}
+
 		public void Change(float val)
 		{
 			value += val;

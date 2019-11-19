@@ -11,8 +11,12 @@ namespace Spell
 		public float Value { get; set; }
 		public float Duration { get; set; }
 		
+		public float UpdateInterval { get; set; }
 		public int TargetCount { get; set; }
-		public float Cost { get; set; }
+
+		public SpellElementDesc()
+		{
+		}
 
 		public SpellElementDesc(string json) : this(SpellElementSimple.FromJson(json))
 		{
@@ -27,7 +31,6 @@ namespace Spell
 			this.IsBossAffect = simple.Boss;
 			this.Value = (float) Convert.ToDouble(simple.Val);
 			this.Duration = (float) Convert.ToDouble(simple.Dur);
-			this.Cost = (float) Convert.ToDouble(simple.Cost);
 			this.TargetCount = simple.Count ?? 1;
 		}
 	}

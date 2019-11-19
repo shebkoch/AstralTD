@@ -9,6 +9,7 @@ namespace Creature
 	[RequireComponent(typeof(TargetComponent))]
 	[RequireComponent(typeof(SimpleAttackComponent))]
 	[RequireComponent(typeof(PoolInfoComponent))]
+	[RequireComponent(typeof(MissileAttack))]
 	public class MissileEntity : MonoBehaviour
 	{
 		[HideInInspector]
@@ -16,15 +17,18 @@ namespace Creature
 		[HideInInspector]
 		public TargetComponent target;
 		[HideInInspector]
-		public SimpleAttackComponent attack;
+		public SimpleAttackComponent simpleAttack;
 		[HideInInspector]
 		public PoolInfoComponent poolInfo;
+		[HideInInspector]
+		public MissileAttack attack;
 		private void Awake()
 		{
 			movement = GetComponent<MovementComponent>();
 			target = GetComponent<TargetComponent>();
-			attack = GetComponent<SimpleAttackComponent>();
+			simpleAttack = GetComponent<SimpleAttackComponent>();
 			poolInfo = GetComponent<PoolInfoComponent>();
+			attack = GetComponent<MissileAttack>();
 		}
 	}
 }

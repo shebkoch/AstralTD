@@ -8,7 +8,7 @@ namespace Spells.Effects
 
 		protected override void OnTick()
 		{
-			target.transform.posX(-value*Time.deltaTime);
+			target.transform.changePosX(-value*Time.deltaTime);
 		}
 	}
 }

@@ -35,7 +35,7 @@ public class SpellWeaving : Singleton<SpellWeaving>
 		}
 		if (Input.GetMouseButtonUp(0)) {
 			if(isMousePressed)
-				SpellManager.Instance.CastOrAttack(usedElems,);
+				SpellManager.Instance.CastOrAttack(usedElems);
 			isMousePressed = false;
 			line.positionCount = 0;
 			pointsList.Clear();

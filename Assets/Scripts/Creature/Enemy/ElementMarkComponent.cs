@@ -15,7 +15,12 @@ namespace Creature.Enemy
 		
 		[ReadOnly]		
 		public List<Elem> marks;
-		
+
+		public void Awake()
+		{
+			GetComponent<DamageComponent>().OnDamage += OnDamage;
+		}
+
 		public void OnEnable()
 		{
 			AddMarks();
@@ -26,6 +31,11 @@ namespace Creature.Enemy
 			marks = Element.RandomSet(markCount);
 			for (int i = 0; i < marks.Count; i++) 
 				markImages[i].sprite = ElementManager.Instance.GetSprite(marks[i]);
+		}
+
+		public void OnDamage(float damage, Elem main)
+		{
+			AddMarks();
 		}
 	}
 }

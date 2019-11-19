@@ -5,6 +5,7 @@ namespace Creature.Enemy
 {
 	public class DamageComponent : MonoBehaviour
 	{
+		public event DamageEvent OnDamage;
 		private ResistComponent resist;
 		private HPComponent hp;
 		private void Start()
@@ -21,6 +22,9 @@ namespace Creature.Enemy
 				damage *= 1 - resistValue.resist;
 		
 			hp.Damage(damage);
+			OnDamage?.Invoke(damage, main);
 		}
+
+		public delegate void DamageEvent(float damage, Elem main);
 	}
 }

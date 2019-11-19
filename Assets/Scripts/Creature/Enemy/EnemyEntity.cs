@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Creature.Enemy;
 using Creature.Enemy.Player;
+using JetBrains.Annotations;
 using Managing;
 using UnityEngine;
 
@@ -34,7 +35,7 @@ public class EnemyEntity : MonoBehaviour
 	[HideInInspector]
 	public MovementComponent movementComponent;
 	[HideInInspector]
-	public EffectComponent effectComponent;
+	public EffectComponent effects;
 	[HideInInspector]
 	public AttackComponent attackComponent;
 	[HideInInspector]
@@ -47,6 +48,8 @@ public class EnemyEntity : MonoBehaviour
 	public DeathComponent death;
 	[HideInInspector]
 	public PoolInfoComponent poolInfo;
+	[HideInInspector]
+	public Animator animator;
 	
 	private void Awake()
 	{
@@ -58,12 +61,13 @@ public class EnemyEntity : MonoBehaviour
 		if(flyComponent && walkComponent) throw new Exception("choose one fly or walk");
 		bossComponent = GetComponent<BossComponent>();
 		movementComponent = GetComponent<MovementComponent>();
-		effectComponent = GetComponent<EffectComponent>();
+		effects = GetComponent<EffectComponent>();
 		attackComponent = GetComponent<AttackComponent>();
 		simpleAttack = GetComponent<SimpleAttackComponent>();
 		damage = GetComponent<DamageComponent>();
 		target = GetComponent<TargetComponent>();
 		death = GetComponent<DeathComponent>();
 		poolInfo = GetComponent<PoolInfoComponent>();
+		animator = GetComponent<Animator>();
 	}
 }

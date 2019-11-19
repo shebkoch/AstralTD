@@ -17,29 +17,29 @@ namespace Creature.Enemy
 
 		private float lastAttack;
 		
-		private SimpleAttackComponent attack;
+		private SimpleAttackComponent simpleAttack;
 
 		private void Start()
 		{
 			lastAttack = Time.timeSinceLevelLoad;
 			targetComponent = GetComponent<TargetComponent>();
-			attack = GetComponent<SimpleAttackComponent>();
+			simpleAttack = GetComponent<SimpleAttackComponent>();
 		}
 
 		void Update()
 		{
 			if(Vector3.Distance(transform.position, targetComponent.targetTransform.position) > distanceToAttack) return;
 			
-			if (lastAttack + attackSpeed > Time.timeSinceLevelLoad)
-			{
-				lastAttack = Time.timeSinceLevelLoad;
+//			if (lastAttack + attackSpeed > Time.timeSinceLevelLoad)
+//			{
+//				lastAttack = Time.timeSinceLevelLoad;
 				Attack();
-			}
+//			}
 		}
 
 		private void Attack()
 		{
-			targetComponent.targetDamage.Damage(attack.attack);
+			targetComponent.targetDamage.Damage(simpleAttack.attack);
 		}
 	}
 }

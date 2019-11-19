@@ -7,6 +7,7 @@ namespace Creature.Enemy
 	{
 		public float speed;
 		public float distanceToReach = 0.001f;
+		[HideInInspector]
 		public bool isTargetReach;
 
 		private TargetComponent targetComponent;
@@ -14,6 +15,11 @@ namespace Creature.Enemy
 		public void Start()
 		{
 			targetComponent = GetComponent<TargetComponent>();
+		}
+
+		private void OnEnable()
+		{
+			isTargetReach = false;
 		}
 
 		public void Update()

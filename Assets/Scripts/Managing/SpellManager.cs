@@ -17,16 +17,14 @@ namespace Managing
 			{
 				PlayerEntity player = PlayerEntity.Instance;
 				EnemyEntity enemy = entities.First();
-				GameObject missile = PoolManager.Instantiate(player.attack.prefab.poolInfo, player.transform.position);
+				GameObject missile = PoolManager.Instantiate(player.attack.prefab.GetComponent<PoolInfoComponent>(), player.transform.position);
 				var missileTarget = missile.GetComponent<TargetComponent>();
-				missileTarget.targetDamage = enemy.damage;
-				missileTarget.targetTransform = enemy.transform;
+				missileTarget.TargetOnEnemy(enemy);
 			}
 			else
 			{
 				var spell = SpellContainer.Instance.GetSpell(elems);
-				if (spell != null)
-					spell.Cast();
+				spell?.Cast();
 			}
 		}
 	}

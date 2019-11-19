@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
 public enum Elem
@@ -13,6 +14,7 @@ public class Elems : List<Elem>
 	public Elems() {}
 	public Elems([NotNull] IEnumerable<Elem> collection) : base(collection) {}
 
+	public Elems(params Elem[] elems) : base(elems.ToList()){}
 	public Elems(int capacity) : base(capacity) {}
 
 	protected bool Equals(Elems other)

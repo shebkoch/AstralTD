@@ -11,11 +11,12 @@ public class EnemiesGenerator : Singleton<EnemiesGenerator>
 	public List<WaveContainer> waves;
 	public int curWave;
 	public float delay;
+	public float waveDelay;
 	
 	[Space(10)]
 	public Vector2 minBounds;
 	public Vector2 maxBounds;
-	private float delta;
+	private float delta = 0;
 
 	void Update()
 	{
@@ -28,14 +29,19 @@ public class EnemiesGenerator : Singleton<EnemiesGenerator>
 			if (enemy) Instantiate(enemy);
 			else
 			{
-				//WAVE_END
 				isWaveStart = false;
+				Invoke(nameof(Next), waveDelay);
 			}
 
 			delta -= delay;
 		}
 	}
 
+	private void Next()
+	{
+		curWave++;
+		isWaveStart = true;
+	}
 	private void Instantiate(GameObject enemy)
 	{
 		Vector2 pos;

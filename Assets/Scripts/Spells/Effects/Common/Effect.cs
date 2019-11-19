@@ -6,7 +6,7 @@ namespace Spells.Effects
 	{
 		public abstract string Name { get;}
 
-		public int updateInterval;
+		public float updateInterval;
 		public int charges;
 		public EnemyEntity target;
 		public Elem elem;
@@ -14,7 +14,7 @@ namespace Spells.Effects
 
 		public float lastTick;
 		
-		public void SetCharges(float dur, int updateInterval)
+		public void SetCharges(float dur, float updateInterval = 1)
 		{
 			this.updateInterval = updateInterval;
 			charges = (int) (dur / updateInterval);
@@ -29,6 +29,8 @@ namespace Spells.Effects
 		{
 			charges--;
 			OnTick();
+			if (charges <= 0) 
+				End();
 		}
 
 		public void End()
