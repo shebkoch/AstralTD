@@ -91,8 +91,8 @@
           </e>
           <e p="Spells" t="Include">
             <e p="AOE" t="Include">
-              <e p="Chain.cs" t="Include" />
-              <e p="ChainObject.cs" t="Include" />
+              <e p="Cask.cs" t="Include" />
+              <e p="Lightning.cs" t="Include" />
             </e>
             <e p="Call" t="Include">
               <e p="Call.cs" t="Include" />
@@ -113,6 +113,10 @@
               <e p="Player" t="Include">
                 <e p="PlayerResistEffect.cs" t="Include" />
               </e>
+            </e>
+            <e p="Projectiles" t="Include">
+              <e p="ProjectileCastComponent.cs" t="Include" />
+              <e p="ProjectileEntity.cs" t="Include" />
             </e>
             <e p="Reads" t="Include">
               <e p="SpellElementDesc.cs" t="Include" />
