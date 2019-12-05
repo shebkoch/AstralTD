@@ -16,7 +16,11 @@ namespace Creature.Enemy
 		private void Update()
 		{
 			if (hpComponent.Hp > 0) return;
-
+			Death();		
+		}
+		
+		public void Death()
+		{
 			EnemiesContainer.Remove(gameObject);
 			gameObject.SetActive(false);
 		}
