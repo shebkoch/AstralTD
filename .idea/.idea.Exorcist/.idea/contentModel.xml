@@ -33,16 +33,26 @@
               <e p="AutoTargetEnemyComponent.cs" t="Include" />
               <e p="MinionEntity.cs" t="Include" />
             </e>
-            <e p="Missile" t="Include">
-              <e p="MissileAttack.cs" t="Include" />
-              <e p="MissileEntity.cs" t="Include" />
-            </e>
             <e p="MovementComponent.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="PlayerAttackComponent.cs" t="Include" />
               <e p="PlayerEntity.cs" t="Include" />
             </e>
             <e p="SimpleAttackComponent.cs" t="Include" />
+            <e p="Spell" t="Include">
+              <e p="Missile" t="Include">
+                <e p="MissileAttack.cs" t="Include" />
+                <e p="MissileEntity.cs" t="Include" />
+              </e>
+              <e p="Projectiles" t="Include">
+                <e p="ProjectileCastComponent.cs" t="Include" />
+                <e p="ProjectileEntity.cs" t="Include" />
+              </e>
+              <e p="Wave" t="Include">
+                <e p="WaveAttack.cs" t="Include" />
+                <e p="WaveEntity.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="Element.cs" t="Include" />
           <e p="genericLib" t="Include">
@@ -119,10 +129,6 @@
                 <e p="PlayerResistEffect.cs" t="Include" />
               </e>
             </e>
-            <e p="Projectiles" t="Include">
-              <e p="ProjectileCastComponent.cs" t="Include" />
-              <e p="ProjectileEntity.cs" t="Include" />
-            </e>
             <e p="Reads" t="Include">
               <e p="SpellElementDesc.cs" t="Include" />
               <e p="SpellElementSimple.cs" t="Include" />
@@ -139,9 +145,6 @@
           </e>
         </e>
         <e p="SerializableDictionary" t="Include">
-          <e p="Editor" t="Include">
-            <e p="SerializableDictionaryPropertyDrawer.cs" t="Include" />
-          </e>
           <e p="SerializableDictionary.cs" t="Include" />
         </e>
       </e>

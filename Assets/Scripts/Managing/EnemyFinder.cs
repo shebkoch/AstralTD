@@ -17,14 +17,16 @@ namespace Managing
 
 	public static class EnemyFinderExtension
 	{
-		public static List<EnemyEntity> Closest(this List<EnemyEntity> entities, float distance = -1)
+		
+		public static List<EnemyEntity> Closest(this List<EnemyEntity> entities, float distance = -1,Vector3 position = default)
 		{
-			var playerPos = PlayerEntity.Instance.transform.position;
+			if(position == default)
+				position = PlayerEntity.Instance.transform.position;
 			IEnumerable<EnemyEntity> resultEntities = entities;
 			if (distance > 0)
-				resultEntities = entities.Where(x => Vector2.Distance(playerPos, x.transform.position) < distance);
+				resultEntities = entities.Where(x => Vector2.Distance(position, x.transform.position) < distance);
 			
-			return resultEntities.OrderBy(x => Vector2.Distance(playerPos, x.transform.position)).ToList();
+			return resultEntities.OrderBy(x => Vector2.Distance(position, x.transform.position)).ToList();
 		}
 
 		public static List<EnemyEntity> Where(this IEnumerable<EnemyEntity> entities, SpellElementDesc spellElementDesc)
