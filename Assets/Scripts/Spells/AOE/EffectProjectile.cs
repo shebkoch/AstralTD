@@ -1,4 +1,3 @@
-using System.Linq;
 using Creature.Enemy;
 using Managing;
 using Spells.Effects;
@@ -7,12 +6,12 @@ using UnityEngine;
 
 namespace Spells.AOE
 {
-	public class Cask : SpellElement
+	public class EffectProjectile <T> : SpellElement where T : Effect, new()
 	{
 		public ProjectileEntity projectileEntity;
 		public override void OnCast()
 		{
-			var enemies = EnemyFinder.Find().Closest().Take(Desc.TargetCount).Where(Desc);
+			var enemies = EnemyFinder.Find().Closest().Where(Desc);
 			
 			GameObject projectile = PoolManager.Instantiate(projectileEntity.gameObject, Vector3.one);
 			var projectileCast = projectile.GetComponent<ProjectileCastComponent>();
@@ -22,9 +21,9 @@ namespace Spells.AOE
 
 		private void OnReach(TargetComponent targetComponent)
 		{
-			Stun stun = new Stun {value = Desc.Value};
-			stun.SetCharges(Desc.Duration, Desc.UpdateInterval);
-			targetComponent.targetEffect.AddEffect(stun);
+			T effect = new T {value = Desc.Value};
+			effect.SetCharges(Desc.Duration, Desc.UpdateInterval);
+			targetComponent.targetEffect.AddEffect(effect);
 		}
 	}
 }

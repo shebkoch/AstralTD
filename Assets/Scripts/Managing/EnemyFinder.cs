@@ -28,7 +28,7 @@ namespace Managing
 			
 			return resultEntities.OrderBy(x => Vector2.Distance(position, x.transform.position)).ToList();
 		}
-
+		
 		public static List<EnemyEntity> Where(this IEnumerable<EnemyEntity> entities, SpellElementDesc spellElementDesc)
 		{
 			List<EnemyEntity> bossCheck = entities.Where(x => x.bossComponent == spellElementDesc.IsBossAffect).ToList();
@@ -38,9 +38,9 @@ namespace Managing
 				case MovementMask.Both:
 					return bossCheck;
 				case MovementMask.Fly:
-					return bossCheck.FindAll(x=>x.flyComponent);
+					return bossCheck.FindAll(x=>x.flyComponent).Take(spellElementDesc.TargetCount).ToList();
 				case MovementMask.Walk:
-					return bossCheck.FindAll(x=> x.walkComponent);
+					return bossCheck.FindAll(x=> x.walkComponent).Take(spellElementDesc.TargetCount).ToList();
 				default:
 					return null;
 			}

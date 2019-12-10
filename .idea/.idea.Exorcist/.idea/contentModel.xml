@@ -5,8 +5,8 @@
     <e p="C:\Users\shebk\.Rider2019.2\config\extensions" t="IncludeRecursive" />
     <e p="C:\Users\shebk\.Rider2019.2\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\shebk\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\shebk\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Exorcist.-882572265.00" t="ExcludeRecursive" />
-    <e p="D:\Utils\Common" t="IncludeRecursive">
+    <e p="C:\Users\shebk\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Exorcist.1562462832.00" t="ExcludeRecursive" />
+    <e p="D:\Utils\Common\Exorcist" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -40,6 +40,11 @@
             </e>
             <e p="SimpleAttackComponent.cs" t="Include" />
             <e p="Spell" t="Include">
+              <e p="ApplicableComponent.cs" t="Include" />
+              <e p="Common" t="Include">
+                <e p="SpellElementsComponent.cs" t="Include" />
+                <e p="SpellEntity.cs" t="Include" />
+              </e>
               <e p="Missile" t="Include">
                 <e p="MissileAttack.cs" t="Include" />
                 <e p="MissileEntity.cs" t="Include" />
@@ -55,7 +60,7 @@
             </e>
           </e>
           <e p="Element.cs" t="Include" />
-          <e p="genericLib" t="Include">
+          <e p="GenericLib" t="Include">
             <e p="Creature" t="Include">
               <e p="HPComponent.cs" t="Include" />
               <e p="ManaComponent.cs" t="Include" />
@@ -106,8 +111,7 @@
           </e>
           <e p="Spells" t="Include">
             <e p="AOE" t="Include">
-              <e p="Cask.cs" t="Include" />
-              <e p="Lightning.cs" t="Include" />
+              <e p="EffectProjectile.cs" t="Include" />
             </e>
             <e p="Call" t="Include">
               <e p="Call.cs" t="Include" />
@@ -145,12 +149,15 @@
           </e>
         </e>
         <e p="SerializableDictionary" t="Include">
+          <e p="Editor" t="Include">
+            <e p="SerializableDictionaryPropertyDrawer.cs" t="Include" />
+          </e>
           <e p="SerializableDictionary.cs" t="Include" />
         </e>
       </e>
       <e p="Exorcist.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
