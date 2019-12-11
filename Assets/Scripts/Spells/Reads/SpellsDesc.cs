@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Spell
+namespace Spells.Reads
 {
 	public class SpellsDesc
 	{

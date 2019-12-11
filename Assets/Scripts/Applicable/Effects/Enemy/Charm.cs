@@ -1,6 +1,7 @@
 using Creature.Enemy;
+using Spells.Applicable.Effects.Common;
 
-namespace Spells.Effects
+namespace Spells.Applicable.Effects.Enemy
 {
 	public class Charm: Effect
 	{

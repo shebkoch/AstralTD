@@ -1,6 +1,6 @@
 using System;
 using Creature.Enemy;
-using Creature.Enemy.Player;
+using GenericLib.Creature;
 using Managing;
 using UnityEngine;
 

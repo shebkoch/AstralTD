@@ -1,5 +1,4 @@
 using Creature.Enemy;
-using Creature.Enemy.Player;
 using Managing;
 using UnityEngine;
 

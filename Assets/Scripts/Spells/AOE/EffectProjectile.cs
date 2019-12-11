@@ -1,12 +1,13 @@
 using Creature.Enemy;
+using Creature.Spell.Projectiles;
 using Managing;
-using Spells.Effects;
-using Spells.Projectiles;
+using Spells.Applicable;
+using Spells.Applicable.Effects.Common;
 using UnityEngine;
 
 namespace Spells.AOE
 {
-	public class EffectProjectile <T> : SpellElement where T : Effect, new()
+	public class EffectProjectile <T> : SpellElement where T : IApplicable, new()
 	{
 		public ProjectileEntity projectileEntity;
 		public override void OnCast()
@@ -21,9 +22,9 @@ namespace Spells.AOE
 
 		private void OnReach(TargetComponent targetComponent)
 		{
-			T effect = new T {value = Desc.Value};
-			effect.SetCharges(Desc.Duration, Desc.UpdateInterval);
-			targetComponent.targetEffect.AddEffect(effect);
+			T applicable = new T();
+			applicable.Init(Desc);
+			applicable.Apply(targetComponent.gameObject);
 		}
 	}
 }

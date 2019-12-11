@@ -14,6 +14,26 @@
           <e p="spells.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Applicable" t="Include">
+            <e p="Damage.cs" t="Include" />
+            <e p="Effects" t="Include">
+              <e p="Common" t="Include">
+                <e p="Effect.cs" t="Include" />
+              </e>
+              <e p="Enemy" t="Include">
+                <e p="Charm.cs" t="Include" />
+                <e p="ElementResistReduce.cs" t="Include" />
+                <e p="PeriodicDamage.cs" t="Include" />
+                <e p="Repulsion.cs" t="Include" />
+                <e p="Slow.cs" t="Include" />
+                <e p="Stun.cs" t="Include" />
+              </e>
+              <e p="Player" t="Include">
+                <e p="PlayerResistEffect.cs" t="Include" />
+              </e>
+            </e>
+            <e p="IApplicable.cs" t="Include" />
+          </e>
           <e p="Creature" t="Include">
             <e p="DamageComponent.cs" t="Include" />
             <e p="EffectComponent.cs" t="Include" />
@@ -35,6 +55,10 @@
             </e>
             <e p="MovementComponent.cs" t="Include" />
             <e p="Player" t="Include">
+              <e p="Missile" t="Include">
+                <e p="MissileAttack.cs" t="Include" />
+                <e p="MissileEntity.cs" t="Include" />
+              </e>
               <e p="PlayerAttackComponent.cs" t="Include" />
               <e p="PlayerEntity.cs" t="Include" />
             </e>
@@ -44,10 +68,6 @@
               <e p="Common" t="Include">
                 <e p="SpellElementsComponent.cs" t="Include" />
                 <e p="SpellEntity.cs" t="Include" />
-              </e>
-              <e p="Missile" t="Include">
-                <e p="MissileAttack.cs" t="Include" />
-                <e p="MissileEntity.cs" t="Include" />
               </e>
               <e p="Projectiles" t="Include">
                 <e p="ProjectileCastComponent.cs" t="Include" />
@@ -109,29 +129,20 @@
             <e p="SpellManager.cs" t="Include" />
             <e p="WaveContainer.cs" t="Include" />
           </e>
+          <e p="SpellBook.cs" t="Include" />
           <e p="Spells" t="Include">
             <e p="AOE" t="Include">
+              <e p="AoeApplicable.cs" t="Include" />
               <e p="EffectProjectile.cs" t="Include" />
             </e>
+            <e p="AppllicableToOne.cs" t="Include" />
             <e p="Call" t="Include">
               <e p="Call.cs" t="Include" />
             </e>
-            <e p="Effects" t="Include">
-              <e p="Common" t="Include">
-                <e p="Effect.cs" t="Include" />
-              </e>
-              <e p="EffectAoeSpell.cs" t="Include" />
-              <e p="Enemy" t="Include">
-                <e p="Charm.cs" t="Include" />
-                <e p="ElementResistReduce.cs" t="Include" />
-                <e p="PeriodicDamage.cs" t="Include" />
-                <e p="Repulsion.cs" t="Include" />
-                <e p="Slow.cs" t="Include" />
-                <e p="Stun.cs" t="Include" />
-              </e>
-              <e p="Player" t="Include">
-                <e p="PlayerResistEffect.cs" t="Include" />
-              </e>
+            <e p="Common" t="Include">
+              <e p="Spell.cs" t="Include" />
+              <e p="SpellContainer.cs" t="Include" />
+              <e p="SpellElement.cs" t="Include" />
             </e>
             <e p="Reads" t="Include">
               <e p="SpellElementDesc.cs" t="Include" />
@@ -139,9 +150,6 @@
               <e p="SpellsDesc.cs" t="Include" />
               <e p="SpellsDescSimple.cs" t="Include" />
             </e>
-            <e p="Spell.cs" t="Include" />
-            <e p="SpellContainer.cs" t="Include" />
-            <e p="SpellElement.cs" t="Include" />
           </e>
           <e p="Weaving" t="Include">
             <e p="ElementWeaving.cs" t="Include" />

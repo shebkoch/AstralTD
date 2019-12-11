@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ElementWeaving : MonoBehaviour
+namespace Weaving
 {
-	public Elem elem;
-	private void OnMouseOver() {
-		SpellWeaving.Instance.OnElemEnter(elem, transform.position);
+	public class ElementWeaving : MonoBehaviour
+	{
+		public Elem elem;
+		private void OnMouseOver() {
+			SpellWeaving.Instance.OnElemEnter(elem, transform.position);
+		}
 	}
 }

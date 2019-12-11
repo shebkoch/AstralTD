@@ -1,7 +1,8 @@
-using System;
+using Creature.Enemy;
+using GenericLib.Creature;
 using UnityEngine;
 
-namespace Creature.Enemy
+namespace Creature
 {
 	public class DamageComponent : MonoBehaviour
 	{

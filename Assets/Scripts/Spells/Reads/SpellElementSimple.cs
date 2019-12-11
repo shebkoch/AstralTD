@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Spell
+namespace Spells.Reads
 {
 	[Serializable]
 	public class SpellElementSimple

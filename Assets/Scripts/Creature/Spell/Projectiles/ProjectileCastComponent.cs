@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 using Creature.Enemy;
 using UnityEngine;
 
-namespace Spells.Projectiles
+namespace Creature.Spell.Projectiles
 {
 	public class ProjectileCastComponent : MonoBehaviour
 	{

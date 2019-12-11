@@ -1,40 +1,43 @@
 using UnityEngine;
 
-public class CameraComponent : MonoBehaviour
+namespace GenericLib.GameManaging
 {
-	[Tooltip("За кем двигаться")]
-	public Transform Target;
-	
-	[Tooltip("на каком расстоянии")]
-	public Vector3 Offset;
-	
-	[Tooltip("Скорость")]
-	public float Velocity;
-	
-	[Tooltip("минимальное расстояние(чтобы не дрожала при приближении)")]
-	public float MinDistance;
-	
-	private float zPlane;
-
-	void Awake()
+	public class CameraComponent : MonoBehaviour
 	{
-		zPlane = transform.position.z;
-	}
+		[Tooltip("За кем двигаться")]
+		public Transform Target;
+	
+		[Tooltip("на каком расстоянии")]
+		public Vector3 Offset;
+	
+		[Tooltip("Скорость")]
+		public float Velocity;
+	
+		[Tooltip("минимальное расстояние(чтобы не дрожала при приближении)")]
+		public float MinDistance;
+	
+		private float zPlane;
 
-	private void Movement()
-	{
-		if (!Target) return;
-		var targetPos = Target.position + Offset;
-		targetPos.z = zPlane;
+		void Awake()
+		{
+			zPlane = transform.position.z;
+		}
 
-		if (Vector3.Distance(transform.position, targetPos) < MinDistance) return;
+		private void Movement()
+		{
+			if (!Target) return;
+			var targetPos = Target.position + Offset;
+			targetPos.z = zPlane;
 
-		var newPos = Vector3.Slerp(transform.position, targetPos, Velocity * Time.fixedDeltaTime);
-		transform.Translate(transform.InverseTransformPoint(newPos));
-	}
+			if (Vector3.Distance(transform.position, targetPos) < MinDistance) return;
 
-	void LateUpdate()
-	{
-		Movement();
+			var newPos = Vector3.Slerp(transform.position, targetPos, Velocity * Time.fixedDeltaTime);
+			transform.Translate(transform.InverseTransformPoint(newPos));
+		}
+
+		void LateUpdate()
+		{
+			Movement();
+		}
 	}
 }

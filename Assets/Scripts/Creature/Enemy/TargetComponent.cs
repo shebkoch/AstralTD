@@ -1,3 +1,4 @@
+using Creature.Player;
 using UnityEngine;
 
 namespace Creature.Enemy

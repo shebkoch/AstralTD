@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Creature.Spell
+namespace Creature.Spell.Common
 {
 	public class SpellEntity : MonoBehaviour
 	{

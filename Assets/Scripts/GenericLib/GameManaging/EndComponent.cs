@@ -1,17 +1,21 @@
+using GenericLib.Utilities;
 using UnityEngine;
 
-public class EndComponent : Singleton<EndComponent>
+namespace GenericLib.GameManaging
 {
-	[HideInInspector]
-	public bool isEnd = false;
-	
-	[Tooltip("меню которое включается в конце ~")]
-	public GameObject endMenu;
-	
-	public void End()
+	public class EndComponent : Singleton<EndComponent>
 	{
-		isEnd = true;
-		if(endMenu)
-			endMenu.SetActive(true);
+		[HideInInspector]
+		public bool isEnd = false;
+	
+		[Tooltip("меню которое включается в конце ~")]
+		public GameObject endMenu;
+	
+		public void End()
+		{
+			isEnd = true;
+			if(endMenu)
+				endMenu.SetActive(true);
+		}
 	}
 }

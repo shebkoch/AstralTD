@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using NUnit.Framework;
 using Spells;
 
-namespace Creature.Spell
+namespace Creature.Spell.Common
 {
 	public class SpellElementsComponent
 	{

@@ -1,41 +1,43 @@
-using System;
 using Creature.Enemy;
-using Creature.Enemy.Player;
-using Creature.Player;
+using GenericLib.Creature;
+using GenericLib.Utilities;
 using UnityEngine;
 
-[RequireComponent(typeof(HPComponent))]
-[RequireComponent(typeof(ManaComponent))]
-[RequireComponent(typeof(EffectComponent))]
-[RequireComponent(typeof(ResistComponent))]
-[RequireComponent(typeof(DamageComponent))]
-[RequireComponent(typeof(SimpleAttackComponent))]
-[RequireComponent(typeof(PlayerAttackComponent))]
-public class PlayerEntity : Singleton<PlayerEntity>
+namespace Creature.Player
 {
-	[HideInInspector]
-	public HPComponent hp;
-	[HideInInspector]
-	public ManaComponent mana;
-	[HideInInspector]
-	public EffectComponent effectComponent;
-	[HideInInspector]
-	public ResistComponent resist;
-	[HideInInspector]
-	public DamageComponent damageComponent;
-	[HideInInspector]
-	public SimpleAttackComponent simpleAttack;
-	[HideInInspector] 
-	public PlayerAttackComponent attack;
-	
-	private void Awake()
+	[RequireComponent(typeof(HPComponent))]
+	[RequireComponent(typeof(ManaComponent))]
+	[RequireComponent(typeof(EffectComponent))]
+	[RequireComponent(typeof(ResistComponent))]
+	[RequireComponent(typeof(DamageComponent))]
+	[RequireComponent(typeof(SimpleAttackComponent))]
+	[RequireComponent(typeof(PlayerAttackComponent))]
+	public class PlayerEntity : Singleton<PlayerEntity>
 	{
-		hp = GetComponent<HPComponent>();
-		mana = GetComponent<ManaComponent>();
-		effectComponent = GetComponent<EffectComponent>();
-		resist = GetComponent<ResistComponent>();
-		damageComponent = GetComponent<DamageComponent>();
-		simpleAttack = GetComponent<SimpleAttackComponent>();
-		attack = GetComponent<PlayerAttackComponent>();
+		[HideInInspector]
+		public HPComponent hp;
+		[HideInInspector]
+		public ManaComponent mana;
+		[HideInInspector]
+		public EffectComponent effectComponent;
+		[HideInInspector]
+		public ResistComponent resist;
+		[HideInInspector]
+		public DamageComponent damageComponent;
+		[HideInInspector]
+		public SimpleAttackComponent simpleAttack;
+		[HideInInspector] 
+		public PlayerAttackComponent attack;
+	
+		private void Awake()
+		{
+			hp = GetComponent<HPComponent>();
+			mana = GetComponent<ManaComponent>();
+			effectComponent = GetComponent<EffectComponent>();
+			resist = GetComponent<ResistComponent>();
+			damageComponent = GetComponent<DamageComponent>();
+			simpleAttack = GetComponent<SimpleAttackComponent>();
+			attack = GetComponent<PlayerAttackComponent>();
+		}
 	}
 }

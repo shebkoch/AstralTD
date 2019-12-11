@@ -1,6 +1,8 @@
+using GenericLib.Extension;
+using Spells.Applicable.Effects.Common;
 using UnityEngine;
 
-namespace Spells.Effects
+namespace Spells.Applicable.Effects.Enemy
 {
 	public class Repulsion : Effect
 	{

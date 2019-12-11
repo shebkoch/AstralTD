@@ -1,15 +1,19 @@
+using GenericLib.Utilities;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManagerComponent : Singleton<GameManagerComponent>
+namespace GenericLib.GameManaging
 {
-	public void Restart()
+	public class GameManagerComponent : Singleton<GameManagerComponent>
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-	}
+		public void Restart()
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
 
-	public void Exit()
-	{
-		Application.Quit();
+		public void Exit()
+		{
+			Application.Quit();
+		}
 	}
 }

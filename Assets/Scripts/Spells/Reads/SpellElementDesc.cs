@@ -1,6 +1,6 @@
 using System;
 
-namespace Spell
+namespace Spells.Reads
 {
 	public class SpellElementDesc
 	{

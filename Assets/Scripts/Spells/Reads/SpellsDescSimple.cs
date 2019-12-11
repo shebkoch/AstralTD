@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Spell
+namespace Spells.Reads
 {
 	public class SpellsDescSimple
 	{

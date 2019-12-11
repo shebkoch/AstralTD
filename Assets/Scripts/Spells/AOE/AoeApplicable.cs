@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
+using Creature.Enemy;
 using Managing;
 using MyBox;
-using UnityEngine;
+using Spells.Applicable.Effects.Common;
 
-namespace Spells.Effects
+namespace Spells.Applicable
 {
-	public class EffectAoeSpell<T> : SpellElement where T : Effect, new()
+	public class AoeApplicable<T> : SpellElement where T : IApplicable, new()
 	{ 
 		public override void OnCast()
 		{
@@ -15,10 +16,9 @@ namespace Spells.Effects
 
 			foreach (var enemy in enemies)
 			{
-				T effect = new T {value = Desc.Value};
-				Debug.Log(effect.Name);
-				effect.SetCharges(Desc.Duration, Desc.UpdateInterval);
-				enemy.effects.AddEffect(effect);
+				T applicable = new T();
+				applicable.Init(Desc);
+				applicable.Apply(enemy.gameObject);
 			}
 		}
 	}

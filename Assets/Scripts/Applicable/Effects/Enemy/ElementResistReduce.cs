@@ -1,8 +1,7 @@
-using System.Collections.Generic;
-using System.Linq;
 using Creature.Enemy;
+using Spells.Applicable.Effects.Common;
 
-namespace Spells.Effects
+namespace Spells.Applicable.Effects.Enemy
 {
 	public abstract class ElementResistReduce : Effect
 	{

@@ -1,5 +1,9 @@
 
-namespace Spells.Effects.Player
+using Creature.Enemy;
+using Creature.Player;
+using Spells.Applicable.Effects.Common;
+
+namespace Spells.Applicable.Effects.Player
 {
 	public class PlayerResistEffect : Effect
 	{

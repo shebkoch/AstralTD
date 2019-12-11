@@ -1,9 +1,8 @@
 using Creature.Enemy;
-using Creature.Enemy.Player;
 using Managing;
 using UnityEngine;
 
-namespace Creature
+namespace Creature.Spell.Missile
 {
 	[RequireComponent(typeof(MovementComponent))]
 	[RequireComponent(typeof(TargetComponent))]

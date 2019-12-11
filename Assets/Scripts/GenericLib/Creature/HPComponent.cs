@@ -1,17 +1,12 @@
-using System;
-using System.Collections.Generic;
-using GenericLib.Creature;
-using MyBox;
-using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
-
-public class HPComponent : Parameter
+namespace GenericLib.Creature
 {
-	public float Hp => value;
-
-	public void Damage(float damage)
+	public class HPComponent : Parameter
 	{
-		Change(-damage);
+		public float Hp => value;
+
+		public void Damage(float damage)
+		{
+			Change(-damage);
+		}
 	}
 }

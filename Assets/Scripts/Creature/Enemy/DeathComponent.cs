@@ -1,4 +1,6 @@
 using System;
+using GenericLib.Creature;
+using Managing;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Creature.Enemy;
-using Creature.Enemy.Player;
 using Managing;
 using UnityEngine;
 

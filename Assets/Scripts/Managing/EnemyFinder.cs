@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Creature.Enemy;
+using Creature.Player;
 using MyBox;
-using Spell;
+using Spells.Reads;
 using UnityEngine;
 
 namespace Managing
 {
-	public class EnemyFinder : Singleton<EnemyFinder>
+	public class EnemyFinder : GenericLib.Utilities.Singleton<EnemyFinder>
 	{
 		public static List<EnemyEntity> Find()
 		{

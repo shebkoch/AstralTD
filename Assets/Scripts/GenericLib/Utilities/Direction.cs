@@ -1,88 +1,91 @@
 using System;
 using UnityEngine;
 
-public enum Direction
+namespace GenericLib.Utilities
 {
-	Left,
-	Right,
-	Up,
-	Down
-}
-
-public static class DirectionExtension
-{
-	public static String GetName(this Direction direction)
+	public enum Direction
 	{
-		switch (direction)
-		{
-			case Direction.Left:
-				return "left";
-			case Direction.Right:
-				return "right";
-			case Direction.Up:
-				return "up";
-			case Direction.Down:
-				return "down";
-			default:
-				throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
-		}
+		Left,
+		Right,
+		Up,
+		Down
 	}
 
-	public static Direction RandomDirection()
+	public static class DirectionExtension
 	{
-		int rand = UnityEngine.Random.Range(0, 4);
-		Direction randomDirection;
-		switch (rand)
+		public static String GetName(this Direction direction)
 		{
-			case 0:
-				randomDirection = Direction.Down;
-				break;
-			case 1:
-				randomDirection = Direction.Up;
-				break;
-			case 2:
-				randomDirection = Direction.Left;
-				break;
-			case 3:
-				randomDirection = Direction.Right;
-				break;
-			default: throw new ArgumentOutOfRangeException(nameof(randomDirection), rand, null);
+			switch (direction)
+			{
+				case Direction.Left:
+					return "left";
+				case Direction.Right:
+					return "right";
+				case Direction.Up:
+					return "up";
+				case Direction.Down:
+					return "down";
+				default:
+					throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+			}
 		}
 
-		return randomDirection;
-	}
-
-	public static Direction Reverse(this Direction direction)
-	{
-		switch (direction)
+		public static Direction RandomDirection()
 		{
-			case Direction.Left:
-				return Direction.Right;
-			case Direction.Right:
-				return Direction.Left;
-			case Direction.Up:
-				return Direction.Down;
-			case Direction.Down:
-				return Direction.Up;
-			default:
-				throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+			int rand = UnityEngine.Random.Range(0, 4);
+			Direction randomDirection;
+			switch (rand)
+			{
+				case 0:
+					randomDirection = Direction.Down;
+					break;
+				case 1:
+					randomDirection = Direction.Up;
+					break;
+				case 2:
+					randomDirection = Direction.Left;
+					break;
+				case 3:
+					randomDirection = Direction.Right;
+					break;
+				default: throw new ArgumentOutOfRangeException(nameof(randomDirection), rand, null);
+			}
+
+			return randomDirection;
 		}
-	}
 
-	public static Vector2 GetVector(Direction direction)
-	{
-		switch (direction)
+		public static Direction Reverse(this Direction direction)
 		{
-			case Direction.Left:
-				return Vector2.left;
-			case Direction.Right:
-				return Vector2.right;
-			case Direction.Up:
-				return Vector2.up;
-			case Direction.Down:
-				return Vector2.down;
-			default:
-				throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+			switch (direction)
+			{
+				case Direction.Left:
+					return Direction.Right;
+				case Direction.Right:
+					return Direction.Left;
+				case Direction.Up:
+					return Direction.Down;
+				case Direction.Down:
+					return Direction.Up;
+				default:
+					throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+			}
+		}
+
+		public static Vector2 GetVector(Direction direction)
+		{
+			switch (direction)
+			{
+				case Direction.Left:
+					return Vector2.left;
+				case Direction.Right:
+					return Vector2.right;
+				case Direction.Up:
+					return Vector2.up;
+				case Direction.Down:
+					return Vector2.down;
+				default:
+					throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
+			}
 		}
 	}
 }

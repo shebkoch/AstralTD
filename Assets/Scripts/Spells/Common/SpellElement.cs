@@ -1,4 +1,4 @@
-using Spell;
+using Spells.Reads;
 using UnityEngine;
 
 namespace Spells

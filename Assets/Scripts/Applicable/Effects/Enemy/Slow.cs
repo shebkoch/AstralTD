@@ -1,4 +1,6 @@
-namespace Spells.Effects
+using Spells.Applicable.Effects.Common;
+
+namespace Spells.Applicable.Effects.Enemy
 {
 	public class Slow : Effect
 	{

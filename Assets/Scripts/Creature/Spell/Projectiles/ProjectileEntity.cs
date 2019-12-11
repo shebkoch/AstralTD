@@ -1,10 +1,8 @@
-using System.Collections.Generic;
-using Creature;
 using Creature.Enemy;
 using Managing;
 using UnityEngine;
 
-namespace Spells.Projectiles
+namespace Creature.Spell.Projectiles
 {
 	[RequireComponent(typeof(MovementComponent))]
 	[RequireComponent(typeof(TargetComponent))]

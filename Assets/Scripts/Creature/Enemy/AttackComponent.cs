@@ -1,5 +1,4 @@
 using System;
-using Creature.Enemy.Player;
 using MyBox;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Creature.Enemy.Player
+namespace Creature
 {
 	public class SimpleAttackComponent : MonoBehaviour
 	{

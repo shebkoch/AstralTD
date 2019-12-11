@@ -1,10 +1,9 @@
-using System;
 using System.Collections.Generic;
-using Spells.Effects;
+using Creature.Enemy;
+using Spells.Applicable.Effects.Common;
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
 
-namespace Creature.Enemy
+namespace Creature
 {
 	public class EffectComponent : MonoBehaviour
 	{

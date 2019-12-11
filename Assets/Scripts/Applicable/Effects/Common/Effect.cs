@@ -1,8 +1,12 @@
+using System;
+using Creature;
+using Creature.Enemy;
+using Spells.Reads;
 using UnityEngine;
 
-namespace Spells.Effects
+namespace Spells.Applicable.Effects.Common
 {
-	public abstract class Effect
+	public abstract class Effect : IApplicable
 	{
 		public abstract string Name { get;}
 
@@ -20,6 +24,19 @@ namespace Spells.Effects
 			charges = (int) (dur / updateInterval);
 		}
 
+		public void Init(SpellElementDesc desc)
+		{
+			value = desc.Value;
+			SetCharges(desc.Duration, desc.UpdateInterval);
+		}
+
+		public void Apply(GameObject gameObject)
+		{
+			var effectComponent = gameObject.GetComponent<EffectComponent>();
+			if (!effectComponent) throw new Exception(gameObject + " need effectComponent");
+			effectComponent.AddEffect(this);
+		}
+		
 		public void Start()
 		{
 			OnStart();
@@ -51,5 +68,7 @@ namespace Spells.Effects
 		{
 			
 		}
+
+
 	}
 }

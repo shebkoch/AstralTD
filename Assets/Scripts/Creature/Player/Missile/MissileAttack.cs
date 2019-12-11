@@ -1,9 +1,7 @@
-using System;
 using Creature.Enemy;
-using Creature.Enemy.Player;
 using UnityEngine;
 
-namespace Creature
+namespace Creature.Spell.Missile
 {
 	public class MissileAttack : MonoBehaviour
 	{

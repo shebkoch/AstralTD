@@ -1,7 +1,7 @@
-using System;
+using Creature.Enemy;
 using UnityEngine;
 
-namespace Creature.Enemy
+namespace Creature
 {
 	public class MovementComponent : MonoBehaviour
 	{

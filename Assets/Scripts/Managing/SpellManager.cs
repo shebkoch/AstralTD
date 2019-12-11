@@ -2,13 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Creature;
 using Creature.Enemy;
+using Creature.Player;
 using MyBox;
 using Spells;
 using UnityEngine;
 
 namespace Managing
 {
-	public class SpellManager : Singleton<SpellManager>
+	public class SpellManager : GenericLib.Utilities.Singleton<SpellManager>
 	{
 		public void CastOrAttack(Elems elems)
 		{
